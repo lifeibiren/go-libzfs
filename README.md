@@ -1,43 +1,15 @@
-# Introduction
+[![build workflow](https://github.com/kraudcloud/go-libzfs/actions/workflows/test.yaml/badge.svg)](https://github.com/kraudcloud/go-libzfs/actions)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/kraudcloud/go-libzfs)](https://pkg.go.dev/github.com/kraudcloud/go-libzfs)
+[![Chat](https://discordapp.com/api/guilds/822439761263198239/widget.png)](https://discord.gg/wppeemfAn9)
 
-**go-libzfs** currently implements basic manipulation of ZFS pools and data sets. Plan is to add more in further development, improve documentation with more examples, and add more tests. _go-libzfs_ use libzfs C library and does not wrap OpenZFS CLI tools. Goal is to let easy using and manipulating OpenZFS form with in go, and tries to map libzfs C library in to go style package respecting golang common practice.
+## ZFS On Linux compatibility
 
-## Note
-This golang package is only used and tested on Linux.
-
-- Version tagged as v0.1 is latest used and compatible with ZFS On Linux version 0.6.5.x
-- Version tagged as v0.2 is latest used and compatible with ZFS On Linux version 0.7.x
-
-[![GoDoc](https://godoc.org/github.com/bicomsystems/go-libzfs?status.svg)](https://godoc.org/github.com/bicomsystems/go-libzfs)
-
-## Main features
-
-- Creating, destroying, importing and exporting pools.
-- Reading and modifying pool properties.
-- Creating, destroying and renaming of filesystem datasets and volumes.
-- Creating, destroying and rollback of snapshots.
-- Cloning datasets and volumes.
-- Reading and modifying dataset and volume properties.
-- Send and receive snapshot streams
-
-
-## Requirements:
-
-- OpenZFS on Linux and libzfs with development headers installed.
-- Developed using go1.9
+- Version tagged as v22. is compatible with ZOL version 2.2.
 
 ## Installing
 
 ```sh
-go get github.com/bicomsystems/go-libzfs
-```
-
-## Testing
-
-```sh
-# On command line shell run
-cd $GOPATH/src/github.com/bicomsystems/go-libzfs
-go test
+go get github.com/kraudcloud/go-libzfs
 ```
 
 ## Usage example
@@ -71,7 +43,13 @@ defer d.Close()
 println("Created zfs volume TESTPOOL/VOLUME1")
 ```
 
+## Testing
+
+```sh
+docker buildx build --progress=plain -f ci.Dockerfile . -t zz
+docker run --privileged --shm-size=4G zz
+```
+
 ## Special thanks to
 
-- [Bicom Systems](http://www.bicomsystems.com) for supporting this little project and that way making it possible.
-- [OpenZFS](http://open-zfs.org) as the main ZFS software collective.
+this was forked from the original work by [bicomsystems](https://github.com/bicomsystems/go-libzfs)
