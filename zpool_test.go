@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	zfs "github.com/kraudcloud/go-libzfs"
+	zfs "github.com/kraudcloud/go-libzfs/v2"
 )
 
 /* ------------------------------------------------------------------------- */

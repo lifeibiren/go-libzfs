@@ -4,12 +4,12 @@
 
 ## ZFS On Linux compatibility
 
-- Version tagged as v22. is compatible with ZOL version 2.2.
+- Version tagged as v2.22. is compatible with ZOL version 2.2.
 
 ## Installing
 
 ```sh
-go get github.com/kraudcloud/go-libzfs
+go get github.com/kraudcloud/go-libzfs/v2
 ```
 
 ## Usage example
