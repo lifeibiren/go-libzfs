@@ -4,8 +4,6 @@
 //
 // TODO: Adding to the pool. (Add the given vdevs to the pool)
 // TODO: Scan for pools.
-//
-//
 package zfs
 
 /*

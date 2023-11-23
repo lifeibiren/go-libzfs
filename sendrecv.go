@@ -21,20 +21,20 @@ import (
 
 // SendFlags send flags
 type SendFlags struct {
-	Verbosity    uint64 // -v
-	Replicate  bool // -R
-	DoAll      bool // -I
-	FromOrigin bool // -o
-	Props      bool // -p
-	DryRun     bool // -n
-	Parsable   bool // -P
-	Progress   bool // show progress (ie. -v)
-	LargeBlock bool // -L
-	EmbedData  bool // -e
-	Compress   bool // -c
-	Raw        bool // raw encrypted records are permitted
-	Backup     bool // only send received properties (ie. -b)
-	Holds      bool // include snapshot holds in send stream
+	Verbosity  uint64 // -v
+	Replicate  bool   // -R
+	DoAll      bool   // -I
+	FromOrigin bool   // -o
+	Props      bool   // -p
+	DryRun     bool   // -n
+	Parsable   bool   // -P
+	Progress   bool   // show progress (ie. -v)
+	LargeBlock bool   // -L
+	EmbedData  bool   // -e
+	Compress   bool   // -c
+	Raw        bool   // raw encrypted records are permitted
+	Backup     bool   // only send received properties (ie. -b)
+	Holds      bool   // include snapshot holds in send stream
 }
 
 // RecvFlags  receive flags
