@@ -170,7 +170,7 @@ const (
 	PoolPropComment
 	PoolPropExpandsz
 	PoolPropFreeing
-	PoolPropFragmentaion
+	PoolPropFragmentation
 	PoolPropLeaked
 	PoolPropMaxBlockSize
 	PoolPropTName
