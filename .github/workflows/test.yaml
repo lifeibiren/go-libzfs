@@ -1,0 +1,15 @@
+name: test
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: build test image
+        run: docker buildx build --progress=plain -f ci.Dockerfile . -t zz --cache-to type=gha --cache-from type=gha
+      - name: run test image
+        run: docker run --privileged --shm-size=4G zz
+

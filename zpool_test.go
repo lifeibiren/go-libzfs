@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	zfs "github.com/bicomsystems/go-libzfs"
+	zfs "github.com/kraudcloud/go-libzfs/v2"
 )
 
 /* ------------------------------------------------------------------------- */

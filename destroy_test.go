@@ -3,11 +3,11 @@ package zfs_test
 import (
 	"testing"
 
-	zfs "github.com/bicomsystems/go-libzfs"
+	zfs "github.com/kraudcloud/go-libzfs/v2"
 )
 
 func zfsTestDataset_DestroyPromote(t *testing.T) {
-	// defer zpoolTestPoolDestroy(t)
+	defer zpoolTestPoolDestroy(t)
 	var c1, c2 zfs.Dataset
 
 	props := make(map[zfs.Prop]zfs.Property)
@@ -58,4 +58,5 @@ func zfsTestDataset_DestroyPromote(t *testing.T) {
 	}
 	t.Log("Destroy promote completed with success")
 	d.Close()
+	cleanupVDisks()
 }

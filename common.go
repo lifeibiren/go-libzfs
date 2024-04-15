@@ -4,8 +4,6 @@
 //
 // TODO: Adding to the pool. (Add the given vdevs to the pool)
 // TODO: Scan for pools.
-//
-//
 package zfs
 
 /*
@@ -151,7 +149,7 @@ const (
 )
 
 // Pool properties. Enumerates available ZFS pool properties. Use it to access
-// pool properties either to read or set soecific property.
+// pool properties either to read or set specific property.
 const (
 	PoolPropCont Prop = iota - 2
 	PoolPropInval
@@ -178,7 +176,7 @@ const (
 	PoolPropComment
 	PoolPropExpandsz
 	PoolPropFreeing
-	PoolPropFragmentaion
+	PoolPropFragmentation
 	PoolPropLeaked
 	PoolPropMaxBlockSize
 	PoolPropTName
@@ -188,6 +186,9 @@ const (
 	PoolPropLoadGUID
 	PoolPropAutotrim
 	PoolPropCompatibility
+	PoopPropBcloneUsed
+	PoolPropBcloneSaved
+	PoolPropBcloneRatio
 	PoolNumProps
 )
 
