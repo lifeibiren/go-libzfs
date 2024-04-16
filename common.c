@@ -9,6 +9,10 @@ libzfs_handle_ptr libzfsHandle;
 
 int go_libzfs_init() {
 	libzfsHandle = libzfs_init();
+	if (!libzfsHandle) {
+		perror(__FUNCTION__);
+		return -1;
+	}
 	return 0;
 }
 

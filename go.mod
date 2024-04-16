@@ -1,3 +1,3 @@
-module github.com/kraudcloud/go-libzfs/v2
+module github.com/lifeibiren/go-libzfs
 
 go 1.20
